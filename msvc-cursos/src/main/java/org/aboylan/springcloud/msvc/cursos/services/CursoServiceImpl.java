@@ -18,7 +18,7 @@ public class CursoServiceImpl implements CursoService {
     @Override
     @Transactional(readOnly = true)
     public List<Curso> listar() {
-        return (List<Curso>) repository.findAll():
+        return (List<Curso>) repository.findAll();
     }
 
     @Override
