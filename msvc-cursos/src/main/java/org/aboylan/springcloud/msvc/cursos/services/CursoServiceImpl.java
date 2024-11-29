@@ -1,6 +1,6 @@
 package org.aboylan.springcloud.msvc.cursos.services;
 
-import org.aboylan.springcloud.msvc.cursos.entity.Curso;
+import org.aboylan.springcloud.msvc.cursos.models.entity.Curso;
 import org.aboylan.springcloud.msvc.cursos.repositories.CursoRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;

@@ -1,6 +1,6 @@
 package org.aboylan.springcloud.msvc.cursos.services;
 
-import org.aboylan.springcloud.msvc.cursos.entity.Curso;
+import org.aboylan.springcloud.msvc.cursos.models.entity.Curso;
 
 import java.util.List;
 import java.util.Optional;

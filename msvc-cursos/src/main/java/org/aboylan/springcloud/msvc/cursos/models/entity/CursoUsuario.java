@@ -1,4 +1,4 @@
-package org.aboylan.springcloud.msvc.cursos.entity;
+package org.aboylan.springcloud.msvc.cursos.models.entity;
 
 import javax.persistence.*;
 

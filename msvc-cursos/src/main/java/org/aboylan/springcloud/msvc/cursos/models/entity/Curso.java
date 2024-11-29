@@ -1,4 +1,6 @@
-package org.aboylan.springcloud.msvc.cursos.entity;
+package org.aboylan.springcloud.msvc.cursos.models.entity;
+
+import org.aboylan.springcloud.msvc.cursos.models.Usuario;
 
 import javax.persistence.*;
 import javax.validation.constraints.NotEmpty;
@@ -17,10 +19,15 @@ public class Curso {
     private String nombre;
 
     @OneToMany(cascade = CascadeType.ALL, orphanRemoval = true)
+    @JoinColumn(name = "curso_id")
     private List<CursoUsuario> cursoUsuarios;
+
+    @Transient
+    private List<Usuario> usuarios;
 
     public Curso() {
         cursoUsuarios = new ArrayList<>();
+        usuarios = new ArrayList<>();
     }
 
     public Long getId() {
@@ -55,4 +62,11 @@ public class Curso {
         cursoUsuarios.remove(cursoUsuario);
     }
 
+    public List<Usuario> getUsuarios() {
+        return usuarios;
+    }
+
+    public void setUsuarios(List<Usuario> usuarios) {
+        this.usuarios = usuarios;
+    }
 }
