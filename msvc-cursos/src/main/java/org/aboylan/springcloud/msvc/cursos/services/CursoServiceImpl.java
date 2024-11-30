@@ -1,5 +1,6 @@
 package org.aboylan.springcloud.msvc.cursos.services;
 
+import org.aboylan.springcloud.msvc.cursos.clients.UsuarioClientRest;
 import org.aboylan.springcloud.msvc.cursos.models.Usuario;
 import org.aboylan.springcloud.msvc.cursos.models.entity.Curso;
 import org.aboylan.springcloud.msvc.cursos.repositories.CursoRepository;
@@ -15,6 +16,9 @@ public class CursoServiceImpl implements CursoService {
 
     @Autowired
     private CursoRepository repository;
+
+    @Autowired
+    private UsuarioClientRest client;
 
     @Override
     @Transactional(readOnly = true)
