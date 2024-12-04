@@ -11,7 +11,7 @@ import org.springframework.web.bind.annotation.RequestBody;
 public interface UsuarioClientRest {
 
     @GetMapping("/{id}")
-    Usuario detalle(@PathVariable Long id);
+    Usuario detalle(@PathVariable(name="id") Long id);
 
     @PostMapping("/")
     Usuario crear(@RequestBody Usuario usuario);
