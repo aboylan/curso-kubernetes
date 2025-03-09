@@ -1,18 +1,20 @@
-version: "3.9"
 services:
+
   mysql8:
+    container_name: mysql8
     image: mysql:8
     ports:
       - "3306:3306"
     environment:
-      MYSQL_ROOT_PASSWORD: sasa
-      MYSQL_DATDABASE: msvc_usuarios
+      MYSQL_ROOT_PASSWORD: sasa1234
+      MYSQL_DATABASE: msvc_usuarios
     volumes:
       - data-mysql:/var/lib/mysql
     networks:
       - spring
 
   postgres14:
+    container_name: postgres14
     image: postgres:14-alpine
     ports:
       - "5432:5432"
@@ -25,6 +27,7 @@ services:
       - spring
 
   msvc-usuarios:
+    container_name: msvc-usuarios
     image: usuarios:latest
     ports:
       - "8001:8001"
@@ -36,6 +39,7 @@ services:
     restart: always
 
   msvc-cursos:
+    container_name: msvc-cursos
     image: cursos:latest
     ports:
       - "8002:8002"
@@ -49,6 +53,9 @@ services:
 
 volumes:
   data-mysql:
+    name: data-mysql
   data-postgres:
+    name: data-postgres
 networks:
   spring:
+
