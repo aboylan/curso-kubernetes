@@ -4,11 +4,12 @@ metadata:
   name: msvc-usuarios
 data:
   port: "8001"
-  db_host: mysql:3306
+  db_host: "mysql8:3306"
   database: msvc_usuarios
-  username: root
-  password: sasa1234
+# username: root
+#  password: sasa1234
   curso_url: msvc-cursos:8002
+
 ---
 apiVersion: v1
 kind: ConfigMap
@@ -16,8 +17,8 @@ metadata:
   name: msvc-cursos
 data:
   port: "8002"
-  db_host: postgres14:5432
+  db_host: "postgres14:5432"
   database: msvc_cursos
-  username: postgres
-  password: sasa
+#  username: postgres
+#  password: sasa
   usuario_url: msvc-usuarios:8001
